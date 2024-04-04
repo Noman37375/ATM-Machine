@@ -1,9 +1,10 @@
 {
-  "name": "atm-machine",
+  "name": "atm-machine-by-m.noman",
   "version": "1.0.0",
   "description": "This is the program working as  ATM Machine system.",
   "main": "index.js",
   "type": "module",
+  "bin": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },

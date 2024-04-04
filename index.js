@@ -1,3 +1,4 @@
+#! /usr/bin/env node
 import inquirer from "inquirer";
 let currentBalance = 100000000;
 let yourPin = 37375;
@@ -38,12 +39,14 @@ if (correctPin.pin === yourPin) {
         }
     }
     else if (mainMenu.action == "Fast Cash") {
-        let fastcash = await inquirer.prompt([{
+        let fastcash = await inquirer.prompt([
+            {
                 type: "list",
                 name: "how_much",
                 message: "Choose the  amount for Fast cash",
                 choices: [100, 500, 1000, 10000],
-            }]);
+            },
+        ]);
         if (fastcash.how_much < currentBalance) {
             let remainingAmount = currentBalance - fastcash.how_much;
             console.log(`Your Remaining balance is$ ${remainingAmount}`);
